@@ -221,14 +221,24 @@
         if (!isGuideActive) {
           guideDiv = document.createElement('div');
           guideDiv.id = 'eri-ilebilirlik-guide';
-          document.body.appendChild(guideDiv);
-          document.addEventListener('mousemove', moveGuide);
+          guideDiv.style.position = 'fixed';
+          guideDiv.style.left = '0';
+          guideDiv.style.width = '100vw';
+          guideDiv.style.height = '4px';
+          guideDiv.style.background = '#3182ce';
+          guideDiv.style.opacity = '0.7';
+          guideDiv.style.zIndex = '2147483647';
+          guideDiv.style.pointerEvents = 'none';
+          guideDiv.style.filter = 'none !important';
+          guideDiv.style.backdropFilter = 'none !important';
+          (document.documentElement || document.body).appendChild(guideDiv);
+          window.addEventListener('mousemove', moveGuide);
           btn.style.background = '#c6f6d5';
           btn.innerText = 'Okuma Kılavuzu (Açık)';
           isGuideActive = true;
         } else {
           if (guideDiv) guideDiv.remove();
-          document.removeEventListener('mousemove', moveGuide);
+          window.removeEventListener('mousemove', moveGuide);
           btn.style.background = '#edf2f7';
           btn.innerText = 'Okuma Kılavuzu';
           isGuideActive = false;
@@ -246,14 +256,23 @@
         if (!isMaskActive) {
           maskDiv = document.createElement('div');
           maskDiv.id = 'eri-ilebilirlik-mask';
-          document.body.appendChild(maskDiv);
-          document.addEventListener('mousemove', moveMask);
+          maskDiv.style.position = 'fixed';
+          maskDiv.style.left = '0';
+          maskDiv.style.width = '100vw';
+          maskDiv.style.height = '120px';
+          maskDiv.style.background = 'rgba(0,0,0,0.15)';
+          maskDiv.style.zIndex = '2147483647';
+          maskDiv.style.pointerEvents = 'none';
+          maskDiv.style.filter = 'none !important';
+          maskDiv.style.backdropFilter = 'none !important';
+          (document.documentElement || document.body).appendChild(maskDiv);
+          window.addEventListener('mousemove', moveMask);
           btn.style.background = '#c6f6d5';
           btn.innerText = 'Okuma Maskesi (Açık)';
           isMaskActive = true;
         } else {
           if (maskDiv) maskDiv.remove();
-          document.removeEventListener('mousemove', moveMask);
+          window.removeEventListener('mousemove', moveMask);
           btn.style.background = '#edf2f7';
           btn.innerText = 'Okuma Maskesi';
           isMaskActive = false;
