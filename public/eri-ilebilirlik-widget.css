@@ -1,0 +1,126 @@
+#eri-ilebilirlik-widget-container {
+  font-family: Arial, Helvetica, sans-serif;
+  filter: none !important;
+  isolation: isolate;
+  will-change: auto;
+  backdrop-filter: none !important;
+  position: fixed !important;
+  z-index: 2147483647 !important;
+}
+#eri-ilebilirlik-menu {
+  z-index: 2147483647 !important;
+}
+#eri-ilebilirlik-toggle {
+  z-index: 2147483647 !important;
+}
+#eri-ilebilirlik-widget-container *,
+#eri-ilebilirlik-widget-container *:before,
+#eri-ilebilirlik-widget-container *:after {
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+#eri-ilebilirlik-widget-container *,
+#eri-ilebilirlik-menu,
+#eri-ilebilirlik-toggle {
+  filter: none !important;
+}
+#eri-ilebilirlik-toggle {
+  transition: box-shadow 0.2s;
+}
+#eri-ilebilirlik-toggle:focus {
+  outline: 2px solid #3182ce;
+}
+#eri-ilebilirlik-menu {
+  animation: fadeIn 0.2s;
+}
+.eri-ilebilirlik-feature-btn:focus {
+  outline: 2px solid #3182ce;
+}
+/* Bağlantı vurgulama stili */
+.eri-ilebilirlik-link-highlight {
+  background: #f6e05e !important;
+  color: #2d3748 !important;
+  border: 2px solid #ecc94b !important;
+  border-radius: 4px;
+  padding: 2px 4px;
+  box-shadow: 0 0 4px #ecc94b;
+  text-decoration: underline !important;
+}
+/* Büyük Metin stili */
+.eri-ilebilirlik-big-text {
+  font-size: 1.5em !important;
+  line-height: 1.6 !important;
+}
+/* Metni Sola Hizala */
+.eri-ilebilirlik-left-align {
+  text-align: left !important;
+}
+
+/* Büyük İmleç */
+#eri-ilebilirlik-cursor {
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  background: rgba(49, 130, 206, 0.7);
+  border: 2px solid #3182ce;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+}
+
+/* Okuma Kılavuzu */
+#eri-ilebilirlik-guide {
+  position: fixed;
+  left: 0;
+  width: 100vw;
+  height: 4px;
+  background: #3182ce;
+  opacity: 0.7;
+  z-index: 99999;
+  pointer-events: none;
+}
+
+/* Okuma Maskesi */
+#eri-ilebilirlik-mask {
+  position: fixed;
+  left: 0;
+  width: 100vw;
+  height: 120px;
+  background: rgba(0,0,0,0.15);
+  z-index: 99998;
+  pointer-events: none;
+}
+
+/* Disleksi Dostu Font */
+.eri-ilebilirlik-disleksi {
+  font-family: 'OpenDyslexic', Arial, Helvetica, sans-serif !important;
+}
+
+/* Kontrast Tema */
+.eri-ilebilirlik-contrast {
+  background: #222 !important;
+  color: #fff !important;
+}
+.eri-ilebilirlik-contrast a {
+  color: #ffd700 !important;
+}
+
+/* Solgunlaştırma */
+.eri-ilebilirlik-fade {
+  filter: brightness(0.85) grayscale(0.2);
+}
+
+/* Düşük Doygunluk */
+.eri-ilebilirlik-low-sat {
+  filter: saturate(0.5);
+}
+
+/* Yüksek Doygunluk */
+.eri-ilebilirlik-high-sat {
+  filter: saturate(2);
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
